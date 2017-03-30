@@ -1,0 +1,97 @@
+<p class="downlink"><a href="https://github.com/canisbos/misc-extensions/blob/master/Rightsizer/Rightsizer.safariextz?raw=true">Download Rightsizer</a></p>
+
+<div class="highlightbox">
+  <h5>Note!</h5>
+  <p style="margin-bottom: 0">Rightsizer has been superceded by a new extension: <a href="/quickstyle">Quickstyle</a>. Quickstyle does everything that Rightsizer does, <em>and</em> it adds the ability to apply <em>any</em> CSS property to anything. If you don&rsquo;t need this capability, don&rsquo;t worry, it won&rsquo;t get in your way—so you might as well install Quickstyle instead of Rightsizer. Especially since I will not be developing Rightsizer any further!</p>
+</div>
+
+<p>Safari has the built-in ability to resize, or &ldquo;zoom&rdquo;, the contents of a web page, making everything bigger (to make things easier to see) or smaller (to fit more of the page in the window). It can also resize just the text on a page, leaving everything else the same.</p>
+
+<p>I often want to enlarge text on a web page, but not <em>all</em> of it (which is what Safari will do). The problem is that when you enlarge the text without also enlarging the text&rsquo;s containers, bad stuff can happen: lines can break in weird places, and text may even overflow its container (or get truncated). This usually occurs inside narrow columns, such as sidebars, where the web designer didn&rsquo;t plan for text to be enlarged.</p>
+
+<p>Another problem with Safari&rsquo;s zoom feature is that your zoom level only applies to the current <em>tab</em>—not to a particular website. If you close the tab, your zoom level is forgotten, so the next time you visit the same site, you have to set the zoom again.</p>
+
+<p>I wrote Rightsizer to work around these shortcomings of Safari&rsquo;s text zooming feature.</p>
+
+<p>With Rightsizer, you can resize <em>specific kinds</em> of text elements (or, more precisely, text elements of specific classnames or ID values) without affecting other text on a page. So, for example, on a typical story page of a news website, you could resize just the body of the article while leaving the sidebars intact. And Rightsizer will remember your changes and reapply them when you visit the same page—or similar pages on the same website.</p>
+
+<p>Alternatively, you can zoom the whole page, just like with Safari&rsquo;s built-in zoom. But unlike Safari, Rightsizer remembers your zoom level, and it does so on a per-site basis.</p>
+
+<p>You can also define a favorite font and size in Rightsizer&rsquo;s settings, and have Rightsizer apply them where you want with one keystroke.</p>
+
+<p>Finally, you can also apply a high-contrast color scheme to specific kinds of text elements or to a whole document. Two color schemes are supported: black-on-white and white-on-black.</p>
+
+<h4 id="howtouse">How to use Rightsizer</h4>
+
+<p>Almost every action in Rightsizer is performed with a combination of a mouse click and a keystroke. The general procedure is as follows.</p>
+
+<ol><li>Click a representative sample of the text you want to change and <em>hold down the mouse button</em>. Don&rsquo;t let it go yet. (For example, if you want to resize the body of a news article, click a typical paragraph in the article and hold the button down.)</li>
+  <li>Press the key corresponding to the action you want to perform.</li>
+  <li>Release the mouse button.</li>
+</ol><p>The table below lists the keys you can press while the mouse button is down, and what they do. (Note that some actions can be triggered by more than one key.)</p>
+
+<table style="margin: 1em 1em 1em 3em; border: 1px solid #cfcfcf; border-collapse: collapse;" border="1"><tr><th style="padding: 2px 1em; font-weight: bold;">Key(s)</th> <th style="padding: 2px 1em; font-weight: bold;">Action</th>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">A, +, =</td>
+    <td style="padding: 2px 1em;">Increase the font size</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">Z, -</td>
+    <td style="padding: 2px 1em;">Decrease the font size</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">F, \</td>
+    <td style="padding: 2px 1em;">Apply your favorite font and size</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">Q, 0 (zero)<br/></td>
+    <td style="padding: 2px 1em;">Restore the default font and size</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">C</td>
+    <td style="padding: 2px 1em;">Apply high-contrast colors</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">Shift-C</td>
+    <td style="padding: 2px 1em;">Apply inverse high-contrast colors</td>
+  </tr></table><p>In addition, there are three special keys that modify the behavior of the actions keys in various ways, and they are explained in the table below. These keys are pressed <em>before</em> any of the action keys.</p>
+
+<table style="margin: 1em 1em 1em 3em; border: 1px solid #cfcfcf; border-collapse: collapse;" border="1"><tr><th style="padding: 2px 1em; font-weight: bold;">Key</th> <th style="padding: 2px 1em; font-weight: bold;">Effect</th>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">W</td>
+    <td style="padding: 2px 1em;">Changes will be applied to the whole document.</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">X</td>
+    <td style="padding: 2px 1em;">Changes will be applied <strong>only</strong> to the clicked element—not to all similar elements.</td>
+  </tr><tr><td style="padding: 2px 1em; text-align: center; font: 12px Menlo, monospace;">T</td>
+    <td style="padding: 2px 1em;">Changes will not be saved. (Applies only if autosaving is enabled.)</td>
+  </tr></table><h5><strong>Saving your changes</strong></h5>
+
+<p>By default, Rightsizer will remember any changes you make and reapply them automatically the next time you visit the same website.</p>
+
+<p>To remove all saved changes for the current site, right-click anywhere and select <strong>Forget Font Sizes</strong> in the context menu.</p>
+
+<p>If you&rsquo;ve disabled the automatic memory in Rightsizer&rsquo;s settings, you can tell Rightsizer to remember your font sizes for a site manually: Right-click anywhere and select <strong>Remember Font Sizes</strong> in the context menu.</p>
+
+<h4 id="tips">Tips</h4>
+
+<p>If you want to resize all the text in the parent container of a certain element, first select (highlight) some text that spans more than one element in the container. Then invoke Rightsizer as usual. Rightsizer will apply your changes to the parent container of all the elements that are spanned by the selection. You can use this trick to resize <em>all</em> of the text on a page by typing  ⌘A (to select everything) before invoking Rightsizer.</p>
+
+<p>Normally, the <strong>A</strong> and <strong>Z</strong> keys work by changing the target elements&rsquo; font size. You can change the resizing method to use a zoom factor instead by selecting the &ldquo;Prefer zooming&rdquo; option in Rightsizer&rsquo;s settings. Whichever resizing method you choose in the settings, you can use the other method on a case-by-case basis by pressing <strong>Option-A</strong> or <strong>Option-Z</strong> instead. Note, however, that if you press <strong>W</strong> to target the whole page, subsequent resizing will always use the zoom method, regardless of the resize method setting or whether the Option key is pressed.</p>
+
+<p>You can choose the color scheme that will be applied when you press <strong>C</strong> in Rightsizer&rsquo;s settings. The choices are black-on-white and white-on-black. Whichever scheme you choose as the preferred one, you can apply the inverse of it by pressing <strong>Shift-C</strong> or <strong>Option-C</strong> instead.</p>
+
+<p>If you enable the option to &ldquo;Take over ⌘+/⌘- keys&rdquo; in Rightsizer&rsquo;s settings, pressing those hotkeys will no longer invoke Safari&rsquo;s built-in zoom functionality, but rather cause Rightsizer to zoom the whole page its way (and save your zoom level, unless you have autosaving disabled). You can still access the built-in zoom functions by holding down the Shift key while typing either hotkey.</p>
+
+<h4>Notes</h4>
+
+<p>When you press <strong>A</strong> or <strong>Z</strong> after pressing <strong>W</strong>, Rightsizer will resize the document using a zoom factor, not a font size. This means that images and other non-textual elements will also be resized.</p>
+
+<p>When you use the <strong>X</strong> key to limit changes to just the clicked element, the changes will not be saved.</p>
+
+<p>When specifying your favorite font &amp; size in Rightsizer&rsquo;s settings, you must use the following format:</p>
+
+<pre style="text-align: center;"><code><em>XX</em>px/<em>YY</em>px <em>font-family</em></code></pre>
+
+<p>where <span style="font-family: monospace; white-space: pre-wrap;"><em>XX</em></span> is the font size in pixels, <span style="font-family: monospace; white-space: pre-wrap;"><em>YY</em></span> is the line height in pixels, and <span style="font-family: monospace; white-space: pre-wrap;"><em>font-family</em></span> is the name of the font family. For example:</p>
+
+<pre style="text-align: center;"><code>15px/22px Helvetica Neue</code></pre>
+
+<p>You must include both the font size and the line height, and both measurements must be in pixels.</p>
+
+<p>Normally, when resizing text, Rightsizer uses the CSS <em>font-size</em> property to change the text size. If you enable the option &ldquo;Use CSS zoom instead of font size&rdquo; in Rightsizer&rsquo;s settings, Rightsizer will use the CSS <em>zoom</em> property instead. On rare occasions, this can work better than changing the font size (but it usually does not work as well).</p>
+
+<h4>Credits</h4>
+
+<p>Trevor Fancher contributed the idea and code to choose a parent target element based on a text selection spanning multiple child elements. Thanks, Trevor!</p>
+
+<p><strong><a href="https://github.com/canisbos/misc-extensions/blob/master/Rightsizer/Rightsizer.safariextz?raw=true">Download Rightsizer</a></strong></p>
+
+<p style="text-align: center;"><span style="font-size: 11px;">2011 Canisbos Computing</span><br/><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img style="border-width: 0;" src="http://creativecommons.org/images/public/somerights20.png" alt="Creative Commons License"/></a></p>
