@@ -1,0 +1,63 @@
+<p><strong><a href="http://dl.dropbox.com/u/23990/Canisbos/Moofmarks.safariextz">Download Moofmarks</a></strong></p>
+<p class="screenshot"><img alt="screenshot" src="https://dl.dropbox.com/u/23990/Canisbos/Moofmarks/screenshot.png"></p>
+<p>Moofmarks is a Safari extension that works with cloud bookmarking services <a href="http://pinboard.in/" target="_blank">Pinboard</a>, <a href="http://www.delicious.com/" target="_blank">Delicious</a>, and <a href="http://www.google.com/bookmarks" target="_blank">Google Bookmarks</a>. Moofmarks lets you access your cloud bookmarks in a popup menu so you don't have to actually go to the bookmarking website.</p>
+<p>When you type Moofmarks's configurable hotkey (⌘J by default), a search bar pops up at the top of whatever web page you're currently viewing. At first, it shows a few of your most recently added bookmarks. Start typing a search term, and all matching bookmarks appear in a list under the search bar. To narrow down the list of matches, keep typing.</p>
+<p>To open a bookmark, first highlight it by pressing either the down arrow key or the tab key as many times as necessary. (Moofmarks auto-highlights the top match for you.) Then press Enter to open the bookmark in the current tab, ⌘-Enter to open it in a new foreground tab, or ⌘-Shift-Enter to open it in a new background tab.</p>
+<p>Normally, when you type something in the search bar, Moofmarks searches for matches in all of the properties of your bookmarks: titles, descriptions, URLs, and tags. However, by using one of a few special modifiers in front of a search term, you can restrict the scope of that term to just one property. For example, to search for the word "blog" in just the URLs of your bookmarks, use "u:blog" or "u/blog" as the search term. (Either a colon or a slash is acceptable.)</p>
+<p>Currently, the following search modifiers are supported:</p>
+<table class="mytable mono">
+<tbody>
+<tr>
+<th>Modifier</th><th>Meaning</th>
+</tr>
+<tr>
+<td class="centered">n/</td>
+<td>Match only names (titles)</td>
+</tr>
+<tr>
+<td class="centered">d/</td>
+<td>Match only descriptions</td>
+</tr>
+<tr>
+<td class="centered">t/</td>
+<td>Match only tags</td>
+</tr>
+<tr>
+<td class="centered">u/</td>
+<td>Match only URLs</td>
+</tr>
+</tbody>
+</table>
+<h4>Moofmarks FAQ</h4>
+<dl>
+    <dt>I'm trying to use Moofmarks with my Delicious account, and it's just not working. What's wrong?</dt>
+    <dd>You probably log in to your Delicious account with a Yahoo ID. In that case, Moofmarks won't work for you because it doesn't support the OAuth authentication system Yahoo requires; I'm sorry. Please consider moving your Delicious bookmarks to a non-Yahoo account. You can do that using <a href="https://secure.delicious.com/settings/optin" target="_blank">this link</a>.</dd>
+    <dt>I changed my Pinboard or Delicious password, and now Moofmarks can't log in. What do I do?</dt>
+    <dd>
+        <p>That depends. If you let Safari save your Pinboard or Delicious account info for Moofmarks, you will need to edit the saved password in your login keychain. Here's how to do that:</p>
+        <ol style="margin-bottom: 1em; font-size: 90%">
+        	<li>Launch the Keychain Access application. (You can find it using Spotlight.)</li>
+        	<li>In the <strong>Keychains</strong> pane of the app's window, make sure the "login" keychain is selected.</li>
+        	<li>In the <strong>Category</strong> pane, select <strong>Passwords</strong>.</li>
+        	<li>In the search field (at the right end of the title bar), type "pinboard".</li>
+        	<li>You should see an item named "api.pinboard.in" followed by your username in parentheses. Double-click this item.</li>
+        	<li>In the resulting window, click the <strong>Show password</strong> check box and enter your login password to allow Keychain Access to show the password.</li>
+        	<li>Type your new Pinboard or Delicious password in the field, and then click <strong>Save Changes</strong>.</li>
+        </ol>
+        <p>If you never did let Safari save your Pinboard or Delicious account info for Moofmarks, you can just quit Safari, and it will prompt you for the login info the next you use Moofmarks.</p>
+    </dd>
+    <dt>Do I have to log in to the bookmarking service for Moofmarks to work?</dt>
+    <dd>Sort of, depending on which service you use. For Pinboard or Delicious, the first time you open Moofmarks, Safari will prompt you for your service username and password. If you tick the appropriate checkbox, Safari will remember your login info; otherwise, you'll have to reenter it each time you restart Safari. For Google Bookmarks, if you're not already logged in to your Google account, you'll have to log in through their usual login process. As long as you remain logged in, Moofmarks will be able to access your Google Bookmarks.</dd>
+    <dt>Does Moofmarks update its bookmarks when I add, edit, or remove bookmarks on the bookmarking service?</dt>
+    <dd>Yes: if there have been any changes since the last time you opened Moofmarks, Moofmarks will re-download your bookmarks. The one exception&mdash;as far as I know&mdash;is that Moofmarks can't tell when you remove a bookmark from Google Bookmarks. In that case, or if auto-updating doesn't work for any reason, you can force Moofmarks to reload your bookmarks by clicking the reload button on the search bar.</dd>
+    <dt>Where does Moofmarks store my bookmarks?</dt>
+    <dd>Moofmarks caches downloaded bookmarks in the file ~/Library/Safari/LocalStorage/safari-extension_com.canisbos.moofmarks-zanvztser6_0.localstorage.</dd>
+    <dt>What if I have thousands or millions of bookmarks? Won't that eat up a lot of RAM or make Moofmarks too slow to use?</dt>
+    <dd>I hope not. I don't know, because I only have a very modest collection of about 350 bookmarks in the cloud. I have absolutely no doubt that some users have many thousands. If you're one of them, let me know how Moofmarks works for you, okay?</dd>
+    <dt>How do I change the hotkey?</dt>
+    <dd>You can change it in Moofmarks's settings window (click the Settings button on the Moofmarks search bar). Just click in the hotkey box and press the desired hotkey. If you can't open Moofmark's settings window because the current hotkey is unusable, you can change it in Safari's extension manager (in the Preferences dialog box). Here, you click inside the hotkey box and type the hotkey you want to use. You can use letters, numbers, and symbols, with or without the Shift and/or Option key. (If you want to include the Command key, don't type it. Type the hotkey without Command, and then put a check mark in the "Use ⌘ key" checkbox.) Close the extension manager to enable the new hotkey.</dd>
+    <dt>Why should I use Moofmarks instead of, oh, I don't know, <em>Safari's own bookmark feature</em>?</dt>
+    <dd>For fun? I don't really know. If you use Pinboard, Delicious, or Google Bookmarks anyway, Moofmarks does provide a quick way to access your bookmarks in the cloud. Perhaps you don't like Safari's bookmarks because Safari doesn't provide an easy way to copy or sync bookmarks between different computers&mdash;if you use a cloud bookmarking service for all your bookmarking, that's not an issue. And if you use Safari to access your cloud bookmarks on each of your computers, you might as well use Moofmarks.</dd>
+</dl>
+<p><strong><a href="http://dl.dropbox.com/u/23990/Canisbos/Moofmarks.safariextz">Download Moofmarks</a></strong></p>
+<p style="text-align: center;"><span style="font-size: 11px;">2012 Canisbos Computing</span><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img style="border-width: 0;" src="http://creativecommons.org/images/public/somerights20.png" alt="Creative Commons License" /></a></p>

@@ -1,0 +1,81 @@
+<div id="myhead">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'/>
+
+  <script type="text/javascript">
+    var notRootOrPostOrTagged =
+      location.pathname != '/' && !location.pathname.match(/^\/post\//) && !location.pathname.match(/^\/tagged\//);
+    document.addEventListener('DOMContentLoaded', function (e) {
+      document.querySelector('#headerContent > h1 > a').innerHTML =
+        '<span class="nb">Canisbos</span>&nbsp;Safari&nbsp;Extensions';
+      if (notRootOrPostOrTagged)
+        document.querySelector('head > title').textContent = document.querySelector('h3').textContent + ' - Canisbos';
+      var links = document.querySelectorAll('a[href*="safariextz"]');
+      for (var i = links.length - 1; i >= 0; i--) {
+        links[i].addEventListener('click', function (e) {
+          var filename = /\w+\.safariextz/.exec(e.currentTarget.href)[0];
+          ga('send', 'event', 'Extensions', 'Download', filename);
+          console.log('Download link clicked:', filename);
+        }, false);
+      }
+    }, false);
+
+    if (notRootOrPostOrTagged) {
+      var ss = document.createElement('style');
+      ss.textContent = 'div.postInfo, div.insideInfo { display: none !important; } div.postWrapper { width: 600px; }';
+      document.querySelector('head').appendChild(ss);
+    }
+
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments);
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-17748243-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <a href="/overview" style="margin-left:2px;">Overview</a>
+  <a href="https://groups.google.com/forum/?fromgroups#!forum/canisbos" target="_blank"
+    style="float:right; margin-right:2px;">Support</a>
+
+</div>
+
+<div id="mytoolbar">
+  <a href="mailto:support@canisbos.com" class="email-link"
+    ><img src="https://dl.dropboxusercontent.com/u/23990/Canisbos/email.svg" title="Email"></a>
+  <a href="https://twitter.com/canisbos" class="twitter-link"
+    ><img src="https://dl.dropboxusercontent.com/u/23990/Canisbos/twitter.svg" title="Twitter"></a>
+</div>
+
+<ul id="pagelist">
+  <li><a href="/ccnotepad">ccNotepad</a></li>
+  <li><a href="/cloneandback">Clone&nbsp;&amp;&nbsp;Back</a></li>
+  <li><a href="/cloudmarks" class="bold">Cloudmarks</a></li>
+  <li><a href="/factotum">Factotum</a></li>
+  <li><a href="/customreader" class="bold">CustomReader</a></li>
+  <li><a href="/freshtime">FreshTime</a></li>
+  <li><a href="/directlinks">DirectLinks</a></li>
+  <li><a href="/linkthing" class="bold">LinkThing</a></li>
+  <li><a href="/natkeyscroll">NatKeyScroll</a></li>
+  <li><a href="/navupkey">NavUpKey</a></li>
+  <li><a href="/nopagecache">NoPageCache</a></li>
+  <li><a href="/pickpocket" class="bold">Pickpocket</a></li>
+  <li><a href="/placemarker">Placemarker</a></li>
+  <li><a href="/popsearch" class="bold">PopSearch</a></li>
+  <li><a href="/quicknuke">QuickNuke</a></li>
+  <li><a href="/quickscript">Quickscript</a></li>
+  <li><a href="/quickstyle" class="bold">Quickstyle</a></li>
+  <li><a href="/rightsizer">Rightsizer</a></li>
+  <li><a href="/showpass">ShowPass</a></li>
+  <li><a href="/taboptions" class="bold">Tab Options</a></li>
+  <li><a href="/tabletoy">Tabletoy</a></li>
+  <li><a href="/typefind">TypeFind</a></li>
+</ul>

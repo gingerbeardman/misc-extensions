@@ -1,0 +1,41 @@
+<p class="downlink"><a href="http://dl.dropbox.com/u/23990/Canisbos/NatKeyScroll.safariextz">Download NatKeyScroll</a></p>
+
+<p>This is a really simple, lightweight extension that does just one thing: reverse the scrolling direction of the Up/Down and Page Up/Page Down keys on your keyboard when viewing web pages.</p>
+
+<p>Why would you ever want to do that? Well, if you've adopted Apple's new scrolling paradigm in OS X Lion&mdash;the so-called "natural scrolling"&mdash;you may have noticed that the setting does not affect scrolling with the keyboard. If you've gotten used to <em>moving</em> window content up and down with touch gestures, you might want to maintain that metaphor when you scroll using the keyboard. Install NatKeyScroll, and the Up and Page Up keys move web pages up, while the Down and Page Down keys move them down. Makes sense, doesn't it?</p>
+
+<h4>Settings</h4>
+
+<p>There are a few settings, which can be found in Safari's extension manager. (Open Preferences and click the Extensions tab, then select NatKeyScroll in the list.)</p>
+
+<dl>
+   <dt>Short scroll distance</dt>
+   <dd>This controls how far the page moves when you press Up or Down (without modifier keys). It ranges from 20 pixels to 100 pixels in increments of 20. The default is 40 pixels, the same as Safari's normal line scrolling distance.</dd>
+   <dt>Use smooth scrolling</dt>
+   <dd>This determines whether smooth scrolling is used for keyboard scrolling. (It does not affect scrolling by mouse or touchpad.)</dd>
+   <dt>Use ⌥↑/⌥↓ to scroll a half-screen</dt>
+   <dd>If this option is enabled, typing ⌥↑ (that's Option+Up) will move the page half a screen upward; and ⌥↓, half a screen downward.</dd>
+</dl>
+
+<h4>Notes</h4>
+
+<p>The extension also reverses the scrolling direction when you press ⌘↑/⌘↓. That is, ⌘↑ will scroll the page to the bottom, because you're now <em>moving</em> it all the way up. However, it does <em>not</em> affect the Home and End keys, since "Home" should still mean the top of the page, regardless of the scrolling direction.</p>
+
+<p>If the keyboard focus is in a one-line text input field, the extension will not have any effect. (This is a good thing.)</p>
+
+<p>If the keyboard focus is in a multi-line input field (a &lt;textarea&gt; element), it <em>will</em> reverse the direction of Page Up and Page Down, but it <em>won't</em> reverse the direction of ⌘↑/⌘↓. That's because inside a textarea, the primary effect of ⌘↑/⌘↓ is to move the cursor, and scrolling is only a side effect.</p>
+
+<p>The extension will not affect the use of Shift + directional keys to extend a selection, whether inside or outside an input field.</p>
+
+<p>If you don't have an extended keyboard, you can page up with Fn+Up, or page down with Fn+Down. (This is true regardless of whether NatKeyScroll is installed&mdash;just in case you didn't know. ;-))</p>
+
+<h4>FAQ</h4>
+
+<dl>
+   <dt>Why didn't you make this an application that works system-wide and not just in Safari?</dt>
+   <dl>Because I'm not a Cocoa developer. I only know how to write Safari extensions and other JavaScript stuff. Sorry!</dl>
+</dl>
+
+<p class="downlink"><a href="http://dl.dropbox.com/u/23990/Canisbos/NatKeyScroll.safariextz">Download NatKeyScroll</a></p>
+
+<p style="text-align: center;"><span style="font-size: 11px;">2011 Canisbos Computing</span><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img style="border-width: 0;" src="http://creativecommons.org/images/public/somerights20.png" alt="Creative Commons License" /></a></p>

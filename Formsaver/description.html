@@ -1,0 +1,32 @@
+<p class="downlink"><a href="http://dl.dropbox.com/u/23990/Canisbos/Formsaver.safariextz">Download Form Autosave</a></p>
+
+<div class="screenshot">
+	<img src="http://dl.dropbox.com/u/23990/Canisbos/Formsaver/screenshot.png" width="522" height="365"><br><span class="caption">Form Autosave's context menu commands</span></div>
+
+<p>
+	This extension automatically saves the contents of web forms as you fill them out. If something goes wrong before you can submit a form, or if you need to resubmit a form, you can autofill it with the last saved values using a context menu command.</p>
+
+<h4 id="howtouse">How to use</h4>
+
+<p>
+	You don't need to do anything special to save form contents: saving is automatically enabled. To repopulate a form with its last saved contents, right-click anywhere on the form and select <strong>Repopulate Form</strong> in the context menu.</p>
+<p>
+	If you want to delete the saved contents for a particular form, right-click the form and select <strong>Forget Form Contents</strong> in the context menu. You can delete the saved contents for <em>all</em> forms belonging to a site by deleting the site's stored data in the Privacy tab of Safari's preferences window.</p>
+
+<h4>Notes</h4>
+
+<p>
+	The extension will <em>not</em> save the contents of password fields and fields that are tagged as autocomplete-disabled. It also won't save any field whose contents consist only of 15 or 16 numerical digits, which usually indicates a credit card number. Finally, it won't save the contents of any form that has fewer than three non-password fields; this means most login forms are excluded.</p>
+<p>
+	The extension only keeps the most recent contents of any field. If you change the contents of a field, the old contents are forgotten.</p>
+
+<p>
+	The contents of a form field are saved as soon as you exit the field. (Exiting a field is usually accomplished by pressing the Tab key or clicking outside the field. Also, pressing Enter to submit a form will exit the field you are in.) If you do not exit a field, its contents will not be saved. Thus, if some event causes the form to be closed while a field is still active, the contents of that field will not be saved.</p>
+<p>
+	Form contents are stored on a per-site basis in each site's HTML5 local storage, which is stored in the folder <code>~/Library/Safari/LocalStorage</code>. Since local storage data is stored in clear text, it is only as secure as the contents of your home folder. If you share your OS X user account with other users, you may not want to install this extension, as those other users will be able to easily view your saved form contents. (Passwords, however, are not saved.)</p>
+<p>
+	<strong>All saved form contents for all sites will be deleted if you use Safari's “Remove All Website Data” command</strong>, either from the Privacy tab of Safari preferences or from the Reset Safari dialog box.</p>
+
+<p class="downlink"><a href="http://dl.dropbox.com/u/23990/Canisbos/Formsaver.safariextz">Download Form Autosave</a></p>
+
+<p style="text-align: center;"><span style="font-size: 11px;">2012 Canisbos Computing</span><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img style="border-width: 0;" src="http://creativecommons.org/images/public/somerights20.png" alt="Creative Commons License" /></a></p>
