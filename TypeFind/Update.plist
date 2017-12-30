@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>ZANVZTSER6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>0.5.4</string>
+			<string>0.5.5</string>
 			<key>CFBundleVersion</key>
-			<string>05</string>
+			<string>06</string>
 			<key>URL</key>
-			<string>https://dl.dropboxusercontent.com/u/23990/Canisbos/TypeFind.safariextz</string>
+			<string>https://github.com/canisbos/misc-extensions/blob/master/TypeFind/TypeFind.safariextz?raw=true</string>
 		</dict>
 	</array>
 </dict>
