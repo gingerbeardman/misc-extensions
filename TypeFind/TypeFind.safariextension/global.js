@@ -3,7 +3,7 @@ var se = safari.extension;
 
 const defaults = {
 	trigger : {
-		keyCode  : 47,
+		key      : '/',
 		altKey   : false,
 		ctrlKey  : false,
 		metaKey  : false,
@@ -37,7 +37,7 @@ function handleSettingChange(event) {
 					se.settings.triggerKey = event.newValue.substring(0, 1);
 				} else {
 					var trigger = se.settings.trigger;
-					trigger.keyCode = event.newValue.charCodeAt(0);
+					trigger.key = se.settings.triggerKey;
 					se.settings.trigger = trigger;
 				}
 			break;
@@ -51,8 +51,12 @@ function initializeSettings() {
 			se.settings[key] = defaults[key];
 		}
 	}
-	if (lastVersion < 1) {}
-	se.settings.lastVersion = 1;
+	if (lastVersion < 7) {
+		var trigger = se.settings.trigger;
+		trigger.key = defaults.trigger.key;
+		se.settings.trigger = trigger;
+	}
+	se.settings.lastVersion = 7;
 }
 function passSettingsToAllPages(keys) {
 	var message = {};
